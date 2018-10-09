@@ -2,7 +2,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import styled, { ThemeProvider, injectGlobal } from 'styled-components';
 import { SEO } from 'components';
 import theme from '../../config/Theme';
@@ -62,8 +62,11 @@ injectGlobal`
 const Footer = styled.footer`
   text-align: center;
   padding: 3rem 0;
-  span {
-    font-size: 0.75rem;
+  .by {
+    font-size: .9rem;
+  }
+  .right {
+    font-size: .7rem;
   }
 `;
 
@@ -82,9 +85,10 @@ const Layout = ({ children }) => (
           <SEO />
           {children}
           <Footer>
-            &copy; 2018 by John Doe. All rights reserved. <br />
-            <a href="https://github.com/LeKoArts/gatsby-starter-minimal-blog">GitHub Repository</a> <br />
-            <span>Last build: {data.site.buildTime}</span>
+            <span className="by">&copy; {new Date().getFullYear()} by <Link to="/contact">Warren McQuinn</Link></span>
+            <br />
+            <span className="right">All rights reserved.</span>
+            {/* <span>Last build: {data.site.buildTime}</span> */}
           </Footer>
         </React.Fragment>
       </ThemeProvider>

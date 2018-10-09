@@ -1,5 +1,5 @@
 const colors = {
-  primary: '#d02e77', // Color for buttons or links
+  primary: '#90C2E7', // Color for buttons or links
   bg: 'white', // Background color
   grey: {
     dark: 'rgba(0, 0, 0, 0.9)',
@@ -10,7 +10,7 @@ const colors = {
 };
 
 const transitions = {
-  normal: '0.5s',
+  normal: '0.3s',
 };
 
 const fontSize = {
